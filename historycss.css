@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.main {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.history-section, .milestones-section {
+    margin-bottom: 30px;
+}
+
+.history-section h2, .milestones-section h2 {
+    color: #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+}
+
+.history-section p {
+    font-size: 18px;
+}
+
+.milestones-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.milestones-section li {
+    padding: 5px 0;
+}
+
+/* Add more styles based on your preferences */

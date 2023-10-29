@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+header, footer {
+    /* Your header and footer styles here */
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.events {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.event-list {
+    list-style: none;
+    padding: 0;
+}
+
+.event-list li {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px 0;
+    background-color: #f2f84d;
+}
+
+.event-list li h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.event-list li p {
+    margin: 5px 0;
+}

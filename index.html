@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aditya Rockers Band</title>
+
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        #headerarea
+        {
+            display:flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            margin:5px 0px 0px 0px;
+            border:3px solid black;
+            height:60px;
+            background-color: peachpuff;
+        }
+        .headerbox
+        {
+            font-size: 30px;
+            text-decoration: none;
+            font-style: oblique;
+            font-weight: bold;
+            color: rgb(12, 142, 185);
+        }
+        #picgallery
+        {
+            display:flex;
+            justify-content: space-evenly;
+            background-color: #FEFFAC;
+            border-bottom: 3px solid black;
+            
+        }
+        .drumpic
+        {
+            height:200px;
+            width:200px;
+            background-color: rgb(240, 197, 24);
+            border-radius: 3px;
+        }
+        #buttongallery
+        {
+            margin-top: 20px;
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            width: 100%;
+            height:45vh;
+            align-items:center;
+            
+        }
+        #buttongallery img{
+            width:110px;
+            height:110px;
+            border: 4px solid #ae1ff0;
+            outline:none;
+            margin: -2px -2px -5px -2px;
+            transition-duration: 0.1s;
+            transition-timing-function: ease-in-out;
+            
+        }
+        #buttongallery img:hover
+        {
+            transform: scale(1.2);
+        }
+        #buttongallery img:active
+        {
+            transform: rotate(45deg);
+        }
+        #footerr
+        {
+            background-color: #deb5f1;
+            height:fit-content;
+            font-size: 20px;
+        }
+        #foot
+        {
+            display: flex;
+            justify-content: space-evenly;
+        }
+        #cheer
+        {
+            text-align: center;
+            font-size: 30px;
+            font-style: italic;
+            color: purple;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <header id="headerarea">
+        <a href="about.html"><p class="headerbox">About</p></a>
+        <a href="history.html"><p class="headerbox">History</p></a>
+        <a href="concerts.html"><p class="headerbox">Upcoming concerts</p></a>
+        
+    </header>
+    <main style="background-color:  #45FFCA;">
+        <div id="picgallery">
+        <img src="360_F_6991541_HNzyGkjSHWEzc1L54UyRHWrUDitZyNz6.jpg" class="drumpic">
+        <img src="istockphoto-146967607-612x612.jpg" class="drumpic">
+        <img src="3b47686a6dbf0983f77ac10928b85d41.jpg" class="drumpic">
+    </div>
+    <p id="cheer">Join the magical world of music by playing the drumset!!!</p>
+    <div id="buttongallery">
+        <button class="but"><img src="images/crash.png"></button>
+        <button class="but"><img src="images/kick.png"></button>
+        <button class="but"><img src="images/snare.png"></button>
+        <button class="but"><img src="images/tom1.png"></button>
+        <button class="but"><img src="images/tom2.png"></button>
+        <button class="but"><img src="images/tom3.png"></button>
+        <button class="but"><img src="images/tom4.png"></button>
+    </div>  
+    </main>
+    <footer id="footerr">
+        <div id="foot">
+            <div>
+                Like 
+                <button onclick="likeno++;localStorage.setItem('likenumber',likeno) ;document.querySelector('#likes').innerHTML=`The no. of likes till now is ${likeno};`"><img src="facebook-like-icon-with-long-shadow-that-looks-simple-thumbs-up_68708-504.avif" width="25px" height="25px"></button>
+            </div>
+            <div>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+        <br>
+        <p id="likes"></p>
+        <p>Thanks for support.Please share this among your friends and fall in love with music.</p>
+    </footer>
+
+
+    <script>
+        let likeno=localStorage.getItem('likenumber')|0;
+        let noofdrums=document.querySelectorAll('#buttongallery .but').length;
+        for(let i=1;i<=noofdrums;i++)
+        {
+            document.querySelectorAll('#buttongallery .but')[i-1].addEventListener("click",function()
+            {
+                var source;
+                if(i==1) source="sounds/crash.mp3";
+                if(i==2) source="sounds/kick-bass.mp3";
+                if(i==3) source="sounds/snare.mp3";
+                if(i==4) source="sounds/tom-1.mp3";
+                if(i==5) source="sounds/tom-2.mp3";
+                if(i==6) source="sounds/tom-3.mp3";
+                if(i==7) source="sounds/tom-4.mp3";
+                var audio=new Audio(source);
+                audio.play();
+            });
+        }
+    </script>
+
+</body>
+</html>
